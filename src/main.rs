@@ -56,10 +56,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             let res_as_str = str::from_utf8(res.as_slice()).unwrap();
 
             let key = res_as_str
-                .split(":")
+                .split(':')
                 .last()
                 .unwrap()
-                .split("\"")
+                .split('\"')
                 .nth(1)
                 .unwrap();
 
